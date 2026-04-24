@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 15px;
+        }
+
+        .container {
+            display: flex;
+            height: 90vh;
+        }
+
+        iframe {
+            width: 50%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Embedding Map and External Page</h2>
+</header>
+
+<div class="container">
+
+    <!-- Google Map (WORKS) -->
+    <iframe 
+        src="https://maps.google.com/maps?q=Pune&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+
+    <!-- External Page (use allowed site) -->
+    <iframe 
+        src="https://example.com">
+    </iframe>
+
+</div>
+
+</body>
+</html>
