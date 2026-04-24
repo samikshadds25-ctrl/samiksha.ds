@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons (Font Awesome CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            background: #555;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #222;
+        }
+
+        /* Multi-column layout */
+        .container {
+            padding: 20px;
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Transform effect */
+        .box:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 30px;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .box {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Responsive design */
+        @media (max-width: 900px) {
+            .container {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                column-count: 1;
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Responsive Webpage</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="box">
+        <div class="icon"><i class="fas fa-laptop"></i></div>
+        <h3>Technology</h3>
+        <p>This section uses CSS3 multiple columns and responsive layout.</p>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile</h3>
+        <p>Resize the screen to see responsive behavior.</p>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud</h3>
+        <p>Hover on boxes to see transformation effects.</p>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fas fa-cog"></i></div>
+        <h3>Settings</h3>
+        <p>Animations make the UI more interactive and modern.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Responsive Design Example</p>
+</footer>
+
+</body>
+</html>
